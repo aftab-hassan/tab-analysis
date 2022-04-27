@@ -13157,24 +13157,6 @@ const backend = {
       {
         "@odata.id": null,
         "PassRate": 0.000000000000000,
-        "AvgDuration": 86.0,
-        "TestSK": 343130131,
-        "FlakyCount": 0,
-        "NotImpactedCount": 0,
-        "NotExecutedCount": 0,
-        "FailedCount": 1,
-        "PassedCount": 0,
-        "TotalDuration": 86.000,
-        "TotalCount": 1,
-        "Test": {
-          "@odata.id": null,
-          "TestOwner": "",
-          "TestName": "[(edge) athenadfconfig] Test 3895043e-d226-42c4-b582-34a47b84afbc"
-        }
-      },
-      {
-        "@odata.id": null,
-        "PassRate": 0.000000000000000,
         "AvgDuration": 43.0,
         "TestSK": 343158564,
         "FlakyCount": 0,
@@ -13387,15 +13369,16 @@ for(let i=0;i<backend.value.length;i++) {
         areaPassRate[4].push(backend.value[i].PassRate)
         areaAverageDuration[4].push(backend.value[i].AvgDuration)
 
-      console.log('Athena duration: ' + testName + ' : ' + backend.value[i].AvgDuration)
+      // console.log('Athena duration: ' + testName + ' : ' + backend.value[i].AvgDuration)
+      console.log('Athena pass rate: ' + testName + ' : ' + backend.value[i].PassRate)
 
         if(backend.value[i].PassRate === 0) {
             console.log('0 reliability test: ' + testName)
         }
     }
-
+    
     if(testName.indexOf("TAB.") === 0) {
-        nucleus++;
+      nucleus++;
         areaSplit[5].push(testName);
         areaPassRate[5].push(backend.value[i].PassRate)
         areaAverageDuration[5].push(backend.value[i].AvgDuration)
@@ -13408,7 +13391,7 @@ for(let i=0;i<backend.value.length;i++) {
 
 console.log('Displaying area split: ');
 for(let i=0;i<areaSplit.length;i++) {
-    console.log(areaHeader[i] + ' - ' + areaSplit[i].length)
+  console.log(areaHeader[i] + ' - ' + areaSplit[i].length)
 }
 
 console.log('');
@@ -13422,7 +13405,7 @@ console.log('');
 
 console.log('Displaying area average duration: ');
 for(let i=0;i<areaAverageDuration.length;i++) {
-    console.log(areaHeader[i] + ' - ' + getAverage(areaAverageDuration[i]))
+  console.log(areaHeader[i] + ' - ' + getAverage(areaAverageDuration[i]))
 }
 
 console.log('Displaying stacked reliability: ');
@@ -13445,7 +13428,7 @@ for(let i=0;i<areaPassRate.length;i++) {
         }
 
         else if(areaPassRate[i][j] < 60) {
-            fiftyToSixty++;
+          fiftyToSixty++;
         }
 
         else if(areaPassRate[i][j] < 70) {
@@ -13461,7 +13444,7 @@ for(let i=0;i<areaPassRate.length;i++) {
         }
 
         else if(areaPassRate[i][j] < 95) {
-            ninetyToNinetyFive++;
+          ninetyToNinetyFive++;
         }
 
         else if(areaPassRate[i][j] < 98) {
@@ -13477,7 +13460,7 @@ for(let i=0;i<areaPassRate.length;i++) {
         }
 
         else if(areaPassRate[i][j] < 100) {
-            ninetyNinePointFiveToHundred++;
+          ninetyNinePointFiveToHundred++;
         }
 
         else {

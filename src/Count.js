@@ -58,34 +58,46 @@ export const options = {
   },
 };
 
-const labels = ['List and Library', 'Sites and Groups', 'ODB', 'Spartan', 'Athena', 'Nucleus'];
+const labels = ['Number of active tests', 'Average reliability percentage', 'Average test duration'];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Number of active tests',
+      label: 'List and Library',
       // data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      data: [188, 34, 23, 24, 13, 39],
+      data: [188, 97.77, 51.91],
       backgroundColor: 'rgba(255, 99, 132)',
     },
-    // {
-    //   label: 'Number of active hotfixes',
-    //   data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
-    //   // data: [],
-    //   backgroundColor: 'rgb(54, 162, 235)',
-    // },
     {
-      label: 'Average reliability percentage',
+      label: 'Sites and Groups',
       // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
-      data: ['97.77', '99.83', '99.03', '99.33', '66.31', '96.89'],
+      data: [34, 99.83, 42.69],
       backgroundColor: 'rgb(255, 205, 86, 0.9)',
     },
     {
-      label: 'Average test duration',
+      label: 'ODB',
       // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
-      data: ['51.91', '42.69', '52.40', '32.94', '79.79', '0'],
+      data: [23, 99.03, 52.40],
       backgroundColor: 'rgba(75, 192, 192, 0.5)',
+    },
+    {
+      label: 'Spartan',
+      // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
+      data: [24, 99.33, 32.94],
+      backgroundColor: 'rgba(54, 162, 235, 0.5)',
+    },
+    {
+      label: 'Athena',
+      // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
+      data: [9, 95.78, 79.10],
+      backgroundColor: 'rgba(0,128,0, 0.5)',
+    },
+    {
+      label: 'Nucleus',
+      // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
+      data: [39, 96.89, 0],
+      backgroundColor: 'rgba(241, 90, 34, 0.5)',
     },
   ],
 };
