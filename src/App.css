@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+.buttonParent {
+  text-align: center;
+}
+
+.doughnutParent {
+  /* width: 600px;
+  height: 600px; */
+
+  text-align: center;
+  width: 50vw;
+  height: 50vh;
+
+  position: fixed;
+  top: 32%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+}
+
+.doughnutParent .canvas {
+  /* width: 400px;
+  height: 400px; */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
