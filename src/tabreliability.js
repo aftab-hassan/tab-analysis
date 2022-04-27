@@ -13157,60 +13157,6 @@ const backend = {
       {
         "@odata.id": null,
         "PassRate": 0.000000000000000,
-        "AvgDuration": 8406.0,
-        "TestSK": 343136518,
-        "FlakyCount": 0,
-        "NotImpactedCount": 0,
-        "NotExecutedCount": 0,
-        "FailedCount": 1,
-        "PassedCount": 0,
-        "TotalDuration": 8406.000,
-        "TotalCount": 1,
-        "Test": {
-          "@odata.id": null,
-          "TestOwner": "",
-          "TestName": "[(edge) athenadfconfig] <AzurePath>tab/AthenaBasic.js"
-        }
-      },
-      {
-        "@odata.id": null,
-        "PassRate": 0.000000000000000,
-        "AvgDuration": 1457.0,
-        "TestSK": 343183597,
-        "FlakyCount": 0,
-        "NotImpactedCount": 0,
-        "NotExecutedCount": 0,
-        "FailedCount": 1,
-        "PassedCount": 0,
-        "TotalDuration": 1457.000,
-        "TotalCount": 1,
-        "Test": {
-          "@odata.id": null,
-          "TestOwner": "",
-          "TestName": "[(edge) athenadfconfig] <AzurePath>tab/AthenaListColumn.js"
-        }
-      },
-      {
-        "@odata.id": null,
-        "PassRate": 0.000000000000000,
-        "AvgDuration": 583.55102040816325,
-        "TestSK": 342813178,
-        "FlakyCount": 0,
-        "NotImpactedCount": 0,
-        "NotExecutedCount": 0,
-        "FailedCount": 49,
-        "PassedCount": 0,
-        "TotalDuration": 28594.000,
-        "TotalCount": 49,
-        "Test": {
-          "@odata.id": null,
-          "TestOwner": "",
-          "TestName": "[(edge) athenadfconfig] Harness Error"
-        }
-      },
-      {
-        "@odata.id": null,
-        "PassRate": 0.000000000000000,
         "AvgDuration": 86.0,
         "TestSK": 343130131,
         "FlakyCount": 0,
@@ -13440,6 +13386,8 @@ for(let i=0;i<backend.value.length;i++) {
         areaSplit[4].push(testName);
         areaPassRate[4].push(backend.value[i].PassRate)
         areaAverageDuration[4].push(backend.value[i].AvgDuration)
+
+      console.log('Athena duration: ' + testName + ' : ' + backend.value[i].AvgDuration)
 
         if(backend.value[i].PassRate === 0) {
             console.log('0 reliability test: ' + testName)

@@ -84,7 +84,7 @@ export const data = {
     {
       label: 'Average test duration',
       // data: labels.map(() => faker.datatype.number({ min: 1, max: 1000 })),
-      data: ['51.91', '42.69', '52.40', '32.94', '864.96', '0'],
+      data: ['51.91', '42.69', '52.40', '32.94', '79.79', '0'],
       backgroundColor: 'rgba(75, 192, 192, 0.5)',
     },
   ],
